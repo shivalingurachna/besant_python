@@ -1,0 +1,42 @@
+time_of_day = input("Enter the time of day (morning/afternoon/evening/night): ").lower()
+weather = input("Enter the weather (sunny/rainy/cloudy/snowy): ").lower()
+
+temperature = int(input("Enter the temperature in Celsius: "))
+
+if time_of_day == "morning":
+    if weather == "sunny":
+        print("It's a great time for a morning walk!")
+    elif weather == "rainy":
+        print("Better to stay inside and have a warm coffee.")
+    elif weather == "cloudy":
+        print("You might need a light jacket if going out.")
+    else:
+        print("Stay warm! It might be too cold outside.")
+elif time_of_day == "afternoon":
+    if weather == "sunny":
+        if temperature > 30:
+            print("It's quite hot! Stay hydrated.")
+        else:
+            print("Perfect time for outdoor activities.")
+    elif weather == "rainy":
+        print("Good time to read a book or watch a movie inside.")
+    elif weather == "cloudy":
+        print("A good time to go for a short drive.")
+    else:
+        print("Maybe stay inside and enjoy a warm drink.")
+elif time_of_day == "evening":
+    if weather == "sunny" or weather == "cloudy":
+        print("Nice time for a walk in the park.")
+    elif weather == "rainy":
+        print("How about a cozy dinner at home?")
+    else:
+        print("It might be too cold outside. Keep warm!")
+elif time_of_day == "night":
+    if weather == "clear":
+        print("Perfect time for stargazing!")
+    elif weather == "rainy":
+        print("Listen to the rain while you relax.")
+    else:
+        print("Get a good night's sleep.")
+else:
+    print("Invalid input! Please enter a valid time of day.")
